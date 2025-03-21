@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "driver", "priority_booster_common", "booster_app",
+]
+resolver = "2"
