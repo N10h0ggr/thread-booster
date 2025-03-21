@@ -66,11 +66,15 @@ Booster.exe 944 25
 ```
 
 In this example, the application sends an IOCTL request to the driver to change the priority of the thread with ID `944` to a new level `25`.
+
+**Before boost:**
 ![Before Boost](before_boost.png)
+
+**After boost:**
 ![After Boost](after_boost.png)
+
 
 ## References
 
 - Thanks to the developers of the [windows crate](https://github.com/microsoft/windows-rs) for simplifying Windows API integration in Rust.
-
-This README explains the purpose of Priority Booster and its key components, including the shared library and helpers file. The shared library ensures that both the driver and the userland application use consistent definitions for data structures and IOCTL codes, while the helpers file provides a common set of utility functions to keep the codebase clean and maintainable. Enjoy experimenting with thread priority changes using Rust on Windows!
+- Thanks to 0xflux for the [Santcum EDR](https://github.com/microsoft/windows-rs) for beeing an example. 
