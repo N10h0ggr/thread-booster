@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# thread-booster
-Windows kernel driver that adjusts thread priorities from kernel space
-=======
 # Priority Booster
 
 Priority Booster is a Rust-based project that demonstrates how to adjust thread priorities on Windows by communicating with a custom kernel driver. The project is split into two main components: a driver that handles IOCTL requests and a userland application that sends these requests.
@@ -71,10 +67,14 @@ Booster.exe 944 25
 
 In this example, the application sends an IOCTL request to the driver to change the priority of the thread with ID `944` to a new level `25`.
 
+**Before boost:**
+![Before Boost](before_boost.png)
+
+**After boost:**
+![After Boost](after_boost.png)
 
 
 ## References
 
 - Thanks to the developers of the [windows crate](https://github.com/microsoft/windows-rs) for simplifying Windows API integration in Rust.
-- Thanks to Oxflux for the [Santcum](https://github.com/0xflux/Sanctum) project. 
->>>>>>> master
+- Thanks to 0xflux for the [Santcum EDR](https://github.com/microsoft/windows-rs) for beeing an example. 
