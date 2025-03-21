@@ -77,4 +77,4 @@ In this example, the application sends an IOCTL request to the driver to change 
 ## References
 
 - Thanks to the developers of the [windows crate](https://github.com/microsoft/windows-rs) for simplifying Windows API integration in Rust.
-- Thanks to 0xflux for the [Santcum EDR]([https://github.com/microsoft/windows-rs](https://github.com/0xflux/Sanctum)) for beeing an example. 
+- Thanks to 0xflux for the [Santcum EDR](https://github.com/0xflux/Sanctum) for beeing an example. 
