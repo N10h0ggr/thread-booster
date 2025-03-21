@@ -42,7 +42,7 @@ use wdk_sys::ntddk::{
 // Import shared definitions from your common library.
 use priority_booster_common::{ThreadData, IOCTL_PRIORITY_BOOSTER_SET_PRIORITY};
 
-extern "C" {
+extern "system" {
     // FFI declarations for Windows kernel functions.
     fn PsLookupThreadByThreadId(thread_id: usize, thread: *mut *mut core::ffi::c_void) -> NTSTATUS;
     fn KeSetPriorityThread(thread: *mut core::ffi::c_void, priority: i32);
