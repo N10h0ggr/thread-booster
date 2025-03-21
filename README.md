@@ -66,8 +66,8 @@ Booster.exe 944 25
 ```
 
 In this example, the application sends an IOCTL request to the driver to change the priority of the thread with ID `944` to a new level `25`.
-
-![[./before_boost.png]] ![[./after_boost.png]]
+![Before Boost](before_boost.png)
+![After Boost](after_boost.png)
 
 ## References
 
