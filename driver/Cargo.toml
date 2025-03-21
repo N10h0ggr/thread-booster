@@ -1,0 +1,40 @@
+[package]
+edition = "2021"
+name = "thread-booster"
+version = "1.0.0"
+description = "A WDM driver that changes the priority of a local thread."
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["windows", "driver", "thread", "exampboosterle", "wdm"]
+categories = ["hardware-support"]
+publish = false
+
+[package.metadata.wdk.driver-model]
+driver-type = "WDM"
+
+[lib]
+crate-type = ["cdylib"]
+test = false
+
+[build-dependencies]
+wdk-build = { path = "../../ext-crates/windows-drivers-rs-main/crates/wdk-build", version = "0.3.0" }
+
+[dependencies]
+wdk = { path = "../../ext-crates/windows-drivers-rs-main/crates/wdk", version = "0.3.0" }
+wdk-alloc = { path = "../../ext-crates/windows-drivers-rs-main/crates/wdk-alloc", version = "0.3.0" }
+wdk-panic = { path = "../../ext-crates/windows-drivers-rs-main/crates/wdk-panic", version = "0.3.0" }
+wdk-sys = { path = "../../ext-crates/windows-drivers-rs-main/crates/wdk-sys",  version = "0.3.0" }
+priority_booster_common = { path = "../priority_booster_common" }
+
+
+[features]
+default = []
+nightly = ["wdk/nightly", "wdk-sys/nightly"]
+
+[profile.dev]
+panic = "abort"
+lto = true
+
+[profile.release]
+panic = "abort"
+lto = true
